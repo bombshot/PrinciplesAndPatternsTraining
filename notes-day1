@@ -1,0 +1,89 @@
+Hands-on workshop
+Day 1 - Design Principles - SOLID -> IoT devices management console 
+Day 2 - Design Patterns -> compilers (no knowledge of compilers needed) 
+Day 3 - Principles & Patterns -> pollution report processor 
+
+Pre-requisite
+1) C#.NET 
+2) OO Fundamentals 
+	Abstraction
+	Encapsulation 
+	… 
+
+Expectations:  
+* Identify smells - Code & Design (no architecture smells) 
+* When are where to apply patterns 
+* Clean code -> Clean designs -> Effective Designs 
+* SOLID & specific design patterns 
+
+Effective designs
+	-> lack of smells 
+	-> application of principles 
+	-> unit testability 
+
+Smells 
+	-> *indication* of a deeper design problem 
+	-> violation of design principles 
+	-> God class -> knows and does everything!! 
+
+Coding violations are not smells 
+	-> e.g., not checking parameters for validity 
+
+What is your strategy for addressing these smells? 
+	
+Code smells 
+	* Lacking encapsulation (public data members) 
+	* Magic strings 
+		-> Resource files (internationalisation) 
+	* Conditional code 	
+	* External iteration 
+	* External mutation 
+	* Type-based switch 
+		-> Runtime polymorphism 
+		-> Open Closed Principle 
+
+Design smells
+	* Multifaceted abstraction (multiple responsiblities)
+		-> Extract separate abstractions 
+	* Complex / God method (multiple responsibilities) 
+		-> Extract classes 		
+	Unnecessary abstraction
+		-> We create classes / abstractions instead of leveraging the functionality provided
+			by language / framework / library / etc 
+
+Architecture smells 
+	* All static methods -> Procedural design 
+		(test: Can I mechanically convert my program to a C-like language)
+	
+If you have to make this code smell free -> how much time will it require? 
+	-> Whatever your estimate you are wrong! Because it typically takes 3x times! :-)
+
+What is your strategy for addressing these smells? 
+
+What are smells
+	-> Refactoring -> addressing smells 
+	-> violations of principles 
+		-> SOLID principles 
+
+Single “Responsibility” Principle 
+	-> most misunderstood 
+	-> functionality or features!! but it is not 
+	-> “Responsibility” refers to “Axis of Change” 
+	
+Open Closed Principle 
+	-> Designs should be open for extension but closed for modification!!
+		-> when I want to extend a feature, I should add it as a separate class / method etc. 
+		-> I should not be *forced* to cut open the existing code and modify it 
+
+Dependency Inversion Principle 
+	-> We should depend on abstractions and not concretions
+		-> we should not hard code things! or work on concrete aspects like specifics of an object 
+	
+Take specific smells in the code 
+	-> Address that smell(s) and show the refactored  / improved code 
+	-> Explain why it is better and how it fixes the smell 
+
+
+
+
+	
