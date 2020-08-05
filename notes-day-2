@@ -1,0 +1,56 @@
+Day 2 notes
+
+ildasm.exe 
+
+code smells
+	primitive obsession 
+		-> when we use a primitive type (e.g., integer) instead of a 
+		-> refactoring is to introduce proper abstractions 
+ 
+	complex method 
+		-> moment it crosses certain cyclomatic complexity limit 
+	
+design smell 
+	needless null check!!  
+		-> Missing abstraction 
+		-> Constant object, that is not needed anymore 
+
+	switch based on type 
+		-> "Missing hierarchy"
+		-> replaced with runtime polymorphism 
+ 
+	complex object creation smell 
+		-> somewhat simplified because of domain abstractions
+ 		
+Arch smell 
+	procedural design -> can I mechanically translate this into C code -> answer is Yes 
+
+
+
+Original Expression: 
+
+	var expr = new Expr(
+                new Expr(
+                    new Expr(null, "10", null), "*", new Expr(null, "20", null)),
+                "+",
+                new Expr(null, "30", null));
+
+Step 1 (somewhat better): 
+
+	var exprNode = new Plus(
+                new Multiply(
+                    new Constant(10),
+                    new Constant(20)),
+                new Constant(30));
+
+
+An expression tree consists of expression nodes. The does can be operators 
+or constants. 
+
+
+
+
+
+
+
+
