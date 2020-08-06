@@ -177,15 +177,73 @@ ByteCode
 AddByteCode 
 MultiplyByteCode 
 
+    internal abstract class ByteCode
+    {
+        public abstract void Exec(Stack<int> evalStack);
+        public abstract void UnExec(Stack<int> evalStack);
+    }
 
 
+Command pattern 
+
+Executable objects
+Store, retrieve, execute, unexecute as actions 
+	-> action classes as first-class citizens 
+
+"Reification"
+	-> Process in which we elevate actions 
+		to first-class objects (classes) 
+
+Memento 
+	-> Support for unexec for each command 
 
 
+// "inappropriate abstraction" 
 
+interface ByteCode
+{
+        void Exec(Stack<int> evalStack);
+        void UnExec(Stack<int> evalStack);
+}
 
+Squares, Rectangles, ... 
 
+Shape 				Rollable, Flippable 
 
+Abstract Class			Interface 
+Noun				Adjective 
+Generalization			Operational capability 
+All subtypes must implement	Optional - Protocol 
 
+Abstract factory & factory methods 
+	-> can use enums and switch based on types!!
+
+Composite 
+	-> Part-whole hierarchies and where we need to
+	 treat the leaf and non-leaf ones uniformly 
+
+Factory method 
+	-> control object creation 
+	
+Flyweight pattern 
+	-> Resuing lightweight immutable objects 
+
+Builder pattern
+	-> Creating complex objects
+
+Fluent interfaces 
+	-> code like speaking in a natural language 
+
+Command pattern 
+	-> Elevate actions as abstractions ("reification") 
+
+Mememnto pattern 
+	-> SUpport undo for commands 
+
+Abstract factory 
+	-> Dedicated responsibility for creating objects 
+		e.g., primitive values to OO objects
+	
 
 
 
