@@ -161,9 +161,21 @@ int result = new Interpreter().Interpret(bytecodes);
 // 60 
 Console.WriteLine(result) 
 
+Design smells 
 
+Switch based on types
+External iteration 
+Insufficient Encapsulation
 
+Architecture smell 
 
+Procedural style 
+
+ByteCode provider class -- 
+
+ByteCode 
+AddByteCode 
+MultiplyByteCode 
 
 
 
