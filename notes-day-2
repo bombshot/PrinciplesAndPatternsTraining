@@ -126,17 +126,40 @@ Symptoms/Scenarios:
 	... 
 
 
-class ExprNode {
+enum ByteCodes {
+	LDCI4S = 0x1F, 
+	
+
+class Interpreter {
+	private Stack<int> execStack  = ... 
+	public int Interpret(byte [] bytecodes) {
+		int pc = 0;
+		while(pc < bytecodes.length) {
+		switch(bytecodes[pc++]) {
+		case LDCI4S: 
+			execStack.Push(bytecodes[pc++]);
+			break; 
+		case ADD: 
+			execStack.Push(execStack.Pop() + execStack.Pop());
+			break;
+		case MUL: 
+			execStack.Push(execStack.Pop() * execStack.Pop());
+			break;
+		... 
+							
+	} 
 }
 
-class ExprTreeBuilder {
-	
-} 
-
-///    new ExprNode.Builder()	
-// 
 
 
+// (10 * 20) + 30 
+byte[] bytecodes = { 0x1F, 0x0A, 0x1F, 0x14, 0x5A, 0x1F, 0x1E, 
+0x58 };
+
+int result = new Interpreter().Interpret(bytecodes); 
+
+// 60 
+Console.WriteLine(result) 
 
 
 
