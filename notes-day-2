@@ -1,5 +1,7 @@
 Day 2 notes
 
+http://konf.me/pdp
+
 ildasm.exe 
 
 code smells
@@ -25,10 +27,9 @@ design smell
 Arch smell 
 	procedural design -> can I mechanically translate this into C code -> answer is Yes 
 
-
-
 Original Expression: 
 
+	// ((10 * 20) + 30) 
 	var expr = new Expr(
                 new Expr(
                     new Expr(null, "10", null), "*", new Expr(null, "20", null)),
@@ -43,9 +44,44 @@ Step 1 (somewhat better):
                     new Constant(20)),
                 new Constant(30));
 
+Step 2 : 
 
-An expression tree consists of expression nodes. The does can be operators 
-or constants. 
+var exprNode = Plus.Make(
+                Multiply.Make(
+                    Constant.Make(10),
+                    Constant.Make(20)),
+                Constant.Make(30));
+// factory methods 
+// controlling or limiting object creation 
+// provides basis for further design improvements and simplifications, 
+// including builder, flyweight, fluent interfaces, etc 
+
+Final step: 
+
+((10 * 20) + 30)
+
+ten.multipledBy(twenty).plus(thirty) 
+
+// fluent interfaces
+// we are dealing with domain language 
+// for endusers- programmers  
+
+An expression tree consists of expression nodes. The nodes can be operators or constants. 
+
+
+enum FileElementType {
+	Folder, File, Shortcut 
+	} 
+
+class BinaryExprNode : ExprNode
+    {
+        private readonly IList<ExprNode> elements;
+
+
+Composite pattern 
+
+Signature 
+	Class that is dervied from its base type and has objects of its base type
 
 
 

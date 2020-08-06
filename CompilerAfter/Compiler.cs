@@ -46,6 +46,11 @@ namespace Solid_Master.Composite.Compiler.After
         {
         }
 
+        public ExprName Make(ExprNode arg1, ExprNode arg2)
+        {
+            return new Plus(arg1, arg2)
+        }    
+        
         public override void GenCode()
         {
             base.GenCode();
@@ -71,7 +76,7 @@ namespace Solid_Master.Composite.Compiler.After
         public static void Main()
         {
             // ((10 * 20) + 10)  
-            ExprNode exprNode = new Plus(
+            ExprNode exprNode =  Plus.Make(
                 new Multiply(
                     new Constant(10),
                     new Constant(20)),

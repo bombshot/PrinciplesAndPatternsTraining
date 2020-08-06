@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="After" t="Include">
+        <e p="AirQualityReporter.cs" t="Include" />
+        <e p="App.config" t="Include" />
+        <e p="CityWiseFormatter.cs" t="Include" />
+        <e p="ExcelDataReader.cs" t="Include" />
+        <e p="HTMLBuilder.cs" t="Include" />
+        <e p="IFieldFormatter.cs" t="Include" />
+        <e p="PollutantWiseFormatter.cs" t="Include" />
+        <e p="PollutionDataEntry.cs" t="Include" />
+        <e p="ReportGenerator.cs" t="Include" />
+      </e>
+      <e p="AirQualityReport.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="AirQuality-India-Realtime.xlsx" t="Include" />
+        <e p="CityWiseReport.pdf" t="Include" />
+        <e p="PollutantWiseReport.pdf" t="Include" />
+      </e>
+      <e p="Before" t="Include">
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp2.1" t="Include">
+            <e p="AirQualityReport.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_.19.00" t="ExcludeRecursive" />
+  </component>
+</project>
