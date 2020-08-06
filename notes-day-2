@@ -36,32 +36,41 @@ Original Expression:
                 "+",
                 new Expr(null, "30", null));
 
+
+	var exprTree = ten.MultipledBy(20).Plus(30);  
+
+
 Step 1 (somewhat better): 
 
 	var exprNode = new Plus(
                 new Multiply(
                     new Constant(10),
-                    new Constant(20)),
-                new Constant(30));
+                    new Constant(10)),
+                new Constant(10));
 
-Step 2 : 
+Step 2: 
 
 var exprNode = Plus.Make(
                 Multiply.Make(
                     Constant.Make(10),
-                    Constant.Make(20)),
-                Constant.Make(30));
-// factory methods 
-// controlling or limiting object creation 
-// provides basis for further design improvements and simplifications, 
-// including builder, flyweight, fluent interfaces, etc 
+                    Constant.Make(10)),
+                Constant.Make(10));
+
+Step 3: 
+
+((10 * 20) + 30) 
+
+var exprNode = new ExprBuilder().Const(10).MultipliedBy(20).Plus(10).Build();
+
 
 Final step: 
 
 ((10 * 20) + 30)
+var ten = Constant.Make(10); 
 
-ten.multipledBy(twenty).plus(thirty) 
+var exprTree = ten.MultipledBy(20).Plus(30);  
 
+	
 // fluent interfaces
 // we are dealing with domain language 
 // for endusers- programmers  
@@ -82,6 +91,64 @@ Composite pattern
 
 Signature 
 	Class that is dervied from its base type and has objects of its base type
+
+// factory methods 
+// controlling or limiting object creation 
+// provides basis for further design improvements and simplifications, 
+// including builder, flyweight, fluent interfaces, etc 
+
+Example of controlling object creation - REUSE objects 
+
+Flyweight 
+
+lightweight objects 
+commonly created ones 
+data structure and check for existing objects instead of creating new ones 
+
+Pool in Flyweight	Cache 
+
+Lightweight 		Light or heavy 
+Immutable 		Can be mutable 
+Only if reuse widely	For performance improvement 
+(space constraints) 
+
+Builder
+
+*Any* Complex object 
+	-> hierarchical structure 
+	-> lots of fields 
+
+Symptoms/Scenarios: 
+	Long constructor parameter lists 
+	Long constructor body 
+	Lots of overloaded constructors 
+	Many fields ( >6 )
+	... 
+
+
+class ExprNode {
+}
+
+class ExprTreeBuilder {
+	
+} 
+
+///    new ExprNode.Builder()	
+// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
