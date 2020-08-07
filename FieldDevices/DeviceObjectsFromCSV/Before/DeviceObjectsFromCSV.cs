@@ -1,9 +1,9 @@
-/*using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace EOODDay2.DeviceObjectsFromCSV.cs.Before
+namespace EOOD.DeviceObjectsFromCSV.cs.Before
 {
     struct GeoLocation
     {
@@ -99,4 +99,4 @@ namespace EOODDay2.DeviceObjectsFromCSV.cs.Before
             devices.ForEach(device => Console.WriteLine(device));
         }
     }
-}*/
+}

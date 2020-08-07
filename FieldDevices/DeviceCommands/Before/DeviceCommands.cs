@@ -1,6 +1,6 @@
 using System;
 
-namespace EOODDay2.DeviceCommands.Before
+namespace EOOD.DeviceCommands.Before
 {
     class RemoteControlledVolumeDevice
     {

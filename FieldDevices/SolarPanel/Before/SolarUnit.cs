@@ -1,4 +1,4 @@
-/*using System;
+using System;
 using System.Collections.Generic;
 
 namespace EOOD.SolarPanel.Before
@@ -100,4 +100,4 @@ namespace EOOD.SolarPanel.Before
             Console.WriteLine(smallUnit.PowerGenerationCapacity());
         }
     }
-}*/
+}

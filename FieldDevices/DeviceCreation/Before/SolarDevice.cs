@@ -1,6 +1,6 @@
 using System;
 
-namespace EOODDay2.DeviceCreation.Before
+namespace EOOD.DeviceCreation.Before
 {
     struct GeoLocation
     {
