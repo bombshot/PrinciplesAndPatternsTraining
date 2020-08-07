@@ -1,0 +1,109 @@
+
+Code smells 
+
+"Data clumps"
+
+Design smells 
+
+Weak encapsulation 
+	
+Architecture smell 
+	Procedural design 
+	"Mixed components" -> SRP at component level 
+
+	Infra classes and domain classes 
+
+	Domain classes
+		CitywiseRepor
+		Pollutantwise Report
+		Location 
+		PollutantReading 
+		AirQualityREport 
+		... 
+
+	Infra classes 
+
+		PDFGenerator
+		XLSReader
+		HTMLFormatter
+		Formatter 
+	
+Big Bang Refactoring 
+	-> Strict No No
+	-> Alternative -> Small one step at a time 
+	
+
+Safe vs. unsafe refactoring 
+	-> When done automatically* 
+	-> Small, localised changes are typically very safe (e.g., indexed for loop to foreach)
+
+Design & Arch Analysis tools 
+	-> Quantify tech debt 
+	-> Design & Code metrics 
+	-> Visualize structure 
+ 
+	-> CQL -> Code Query Language 
+	Large methods 
+	Select * from Methods where Methods.Length > 30 
+
+https://www.ndepend.com/	
+https://structure101.com/
+https://www.designite-tools.com/
+https://codescene.io/	
+https://www.jetbrains.com/resharper/
+
+Structure 101
+Virtual refactoring 
+	Doing refactoring without changing the code!! 
+	
+	Tangles and Fat
+	
+Tangles 
+	-> Cyclic dependencies 
+	
+Fat
+	-> Complexity at different levels 
+
+interface Orderable {
+
+}
+
+
+class Order : Orderable {
+	Purchaser purchaser;
+}
+
+interface Purchaser { 
+
+} 
+
+class Person : Purchaser {
+	Orderable orderedItem;
+}
+
+Dependency Inversion Principle 
+
+	
+	Orderable      Purchaser 
+	    ^		   ^	
+	    |              |  
+           Order       Person  	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	

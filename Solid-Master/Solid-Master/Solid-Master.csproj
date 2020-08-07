@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6EE63713-5C30-4EBE-8553-8C5CACFA9A6B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Solid_Master</RootNamespace>
+    <AssemblyName>Solid-Master</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Solid_Master.Observer.Before.ObserverMain</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentAssertions, Version=4.19.4.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.19.4\lib\net45\FluentAssertions.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentAssertions.Core, Version=4.19.4.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentAssertions.4.19.4\lib\net45\FluentAssertions.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractFactory\After\EmployeeFactory.cs" />
+    <Compile Include="Adapter\After\MetricDistanceAdapter.cs" />
+    <Compile Include="Adapter\Before\MetricAdapter.cs" />
+    <Compile Include="Bridge\After\Encryption.cs" />
+    <Compile Include="Bridge\Before\Encryption.cs" />
+    <Compile Include="Builder\After\Compiler.cs" />
+    <Compile Include="Builder\Before\Compiler.cs" />
+    <Compile Include="ChainOfResponsibility\After\Document.cs" />
+    <Compile Include="ChainOfResponsibility\After\DoucmentReviewProcess.cs" />
+    <Compile Include="ChainOfResponsibility\After\Reviewer.cs" />
+    <Compile Include="ChainOfResponsibility\After\ReviewResult.cs" />
+    <Compile Include="ChainOfResponsibility\After\Supervisor.cs" />
+    <Compile Include="ChainOfResponsibility\Before\Document.cs" />
+    <Compile Include="ChainOfResponsibility\Before\DoucmentReviewProcess.cs" />
+    <Compile Include="ChainOfResponsibility\Before\ReviewResult.cs" />
+    <Compile Include="Command\After\Interpret.cs" />
+    <Compile Include="Command\Before\Interpret.cs" />
+    <Compile Include="Composite\After\Compiler.cs" />
+    <Compile Include="Composite\After\Interpret.cs" />
+    <Compile Include="Composite\After\RISCCompiler.cs" />
+    <Compile Include="Composite\Before\Compiler.cs" />
+    <Compile Include="Composite\Before\Expr.cs" />
+    <Compile Include="Decorator\DecoratorMain.cs" />
+    <Compile Include="Decorator\StreamRead.cs" />
+    <Compile Include="Facade\Compiler.cs" />
+    <Compile Include="FactoryMethod\After\Compiler.cs" />
+    <Compile Include="FactoryMethod\Before\Compiler.cs" />
+    <Compile Include="FluentInterface\After\Compiler.cs" />
+    <Compile Include="FluentInterface\Before\Compiler.cs" />
+    <Compile Include="Flyweight\After\Compiler.cs" />
+    <Compile Include="Flyweight\Before\Compiler.cs" />
+    <Compile Include="Iterator\After\Compiler.cs" />
+    <Compile Include="Iterator\Before\Compiler.cs" />
+    <Compile Include="Null\After\IWarranty.cs" />
+    <Compile Include="Null\After\LifeTimeWarranty.cs" />
+    <Compile Include="Null\After\LimitedPeriodWarranty.cs" />
+    <Compile Include="Null\After\SoldArticle.cs" />
+    <Compile Include="Null\After\VoidWarranty.cs" />
+    <Compile Include="Null\Before\SoldArticle.cs" />
+    <Compile Include="Observer\Before\SystemMonitor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="State\After\Account.cs" />
+    <Compile Include="State\After\ActiveAcount.cs" />
+    <Compile Include="State\After\ClosedAccount.cs" />
+    <Compile Include="State\After\FrozenAccount.cs" />
+    <Compile Include="State\After\IAccountState.cs" />
+    <Compile Include="State\After\NotVerifiedAccount.cs" />
+    <Compile Include="State\Before\Account.cs" />
+    <Compile Include="State\Before\AccountTests.cs" />
+    <Compile Include="Strategy\After\Compiler.cs" />
+    <Compile Include="Strategy\Before\Compiler.cs" />
+    <Compile Include="Strategy\EncryptionTest.cs" />
+    <Compile Include="TemplateMethod\After\DataAccessObject.cs" />
+    <Compile Include="TemplateMethod\Before\DataAccessObject.cs" />
+    <Compile Include="Visitor\After\Compiler.cs" />
+    <Compile Include="Visitor\Before\Compiler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Observer\After\" />
+    <Folder Include="Singleton\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
